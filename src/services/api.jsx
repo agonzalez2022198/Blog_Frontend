@@ -9,14 +9,14 @@ apiClient.interceptors.request.use(
     (config) =>{
         const blogDetails = localStorage.getItem('blogs')
 
-        if(userDetails){
+        if(blogDetails){ // Corrección: Cambia userDetails por blogDetails
             const token =  JSON.parse(blogDetails).token
             config.headers.Authorization = `Bearer ${token}`
         }
         return config
     },
-    (e) =>{
-        return Promise.reject(e)
+    (error) =>{
+        return Promise.reject(error)
     }
 );
 
@@ -24,11 +24,11 @@ apiClient.interceptors.request.use(
 export const getBlogs = async () => {
     try {
         return await apiClient.get("/blogs");
-    } catch (e) {
+    } catch (error) {
 
         return{
             error: true,
-            e
+            error
         }
         
     }

@@ -1,12 +1,16 @@
-import { useRoutes } from "react-router-dom";
-import { Toaster } from "react-hot-toast";
-import routes from "./routes.jsx";
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Toaster } from 'react-hot-toast';
+import routes from './routes.jsx';
 
 export const App = () => {
-  let element = useRoutes(routes);
   return (
     <>
-      {element}
+      <Routes>
+        {routes.map((route, index) => (
+          <Route key={index} {...route} />
+        ))}
+      </Routes>
       <Toaster position="bottom-right" reverseOrder={false} />
     </>
   );

@@ -1,8 +1,8 @@
-import { DashboardPage } from "./pages/dashboard";
+import React from 'react';
+import { DashboardPage } from "./pages/dashboard/DashboardPage.jsx";
 
 const routes = [
-    {path: '/auth', element: <AuthPage/>},
-    {path: '/*', element: <DashboardPage/>}
+    { path: '/', element: <DashboardPage /> }
 ]
 
-export default routes
+export default routes;

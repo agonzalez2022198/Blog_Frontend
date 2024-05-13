@@ -24,12 +24,23 @@ apiClient.interceptors.request.use(
 export const getBlogs = async () => {
     try {
         return await apiClient.get("/blogs");
-    } catch (error) {
+    } catch (e) {
 
         return{
             error: true,
-            error
+            e
         }
         
+    }
+}
+
+export const addComments = async (data) =>{
+    try {
+         return await apiClient.post("/comment/addComment", data);
+    }catch(e){
+        return{
+            error: true,
+            e
+        }
     }
 }

@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { useBlogs } from '../../shared/hooks/useAllBlogs.jsx';
-import CommentForm from '../../components/comments/CommentsForm.jsx'; // Importa el componente CommentForm
+import CommentForm from '../../components/comments/CommentsForm.jsx';
+import {CommentsList} from '../../components/comments/ShowComments.jsx';
+import "./dashboardPage.css";
 
 export const DashboardPage = () => {
   const { getB, allBlogs, isFetching } = useBlogs();
@@ -10,24 +12,26 @@ export const DashboardPage = () => {
   }, []);
 
   return (
-    <div>
+    <div className="dashboard-container">
       <h1>All Blogs</h1>
       {isFetching ? (
         <p>Loading...</p>
       ) : (
         <div>
-          <ul>
+          <ul className="blog-list">
             {Array.isArray(allBlogs) && allBlogs.map(blog => (
-              <li key={blog._id}>
-                <h2>{blog.title}</h2>
-                <p>Author: {blog.author}</p>
-                <p>{blog.content}</p>
-                <img src={blog.image} alt={blog.title} />
+              <li key={blog._id} className="blog-item">
+                <h2 className="blog-title">{blog.title}</h2>
+                <p className="blog-author">Author: {blog.author}</p>
+                <p className="blog-content">{blog.content}</p>
+                <img className="blog-image" src={blog.image} alt={blog.title} />
               </li>
             ))}
           </ul>
           {/* Agrega el componente CommentForm aquí */}
           <CommentForm />
+          {/* Agrega el componente CommentsList aquí */}
+          <CommentsList />
         </div>
       )}
     </div>

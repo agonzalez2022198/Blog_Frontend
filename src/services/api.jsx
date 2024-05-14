@@ -44,3 +44,16 @@ export const addComments = async (data) =>{
         }
     }
 }
+
+export const getComments = async (data) => {
+    try {
+        return await apiClient.get("/comment/comments");
+    } catch (e) {
+
+        return{
+            error: true,
+            e
+        }
+        
+    }
+}

@@ -10,7 +10,7 @@ export const useBlogs = () => {
         try {
             const datesBlogs = await getBlogs();
             console.log(datesBlogs);
-
+            
             if (datesBlogs.error) {
                 // Maneja el error
             } else {

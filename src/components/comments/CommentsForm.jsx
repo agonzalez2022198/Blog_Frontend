@@ -15,7 +15,7 @@ const CommentForm = () => {
     };
 
     return (
-        <div>
+        <div >
             <h2>Agregar Comentario</h2>
             <form onSubmit={handleSubmit}>
                 <label htmlFor="author">Autor:</label><br />

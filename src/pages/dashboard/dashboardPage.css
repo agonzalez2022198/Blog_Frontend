@@ -1,0 +1,59 @@
+/* Estilos para el componente DashboardPage */
+.dashboard-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.blog-list {
+    list-style: none;
+    padding: 0;
+}
+
+.blog-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.blog-title {
+    font-size: 24px;
+}
+
+.blog-author {
+    font-style: italic;
+}
+
+.blog-content {
+    margin-top: 10px;
+}
+
+.blog-image {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+}
+
+/* Estilos para el componente CommentsList */
+.comments-container {
+    margin-top: 20px;
+}
+
+.comments-list {
+    list-style: none;
+    padding: 0;
+}
+
+.comment-item {
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.comment-author {
+    font-weight: bold;
+}
+
+.comment-content {
+    margin-top: 5px;
+}

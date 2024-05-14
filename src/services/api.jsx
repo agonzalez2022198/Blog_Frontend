@@ -57,3 +57,15 @@ export const getComments = async (data) => {
         
     }
 }
+
+
+export const getBlogById = async (id) => {
+    try{
+        return await apiClient.get(":id", id )
+    }catch(e){
+        return{
+            error: true,
+            e
+        }
+    }
+}

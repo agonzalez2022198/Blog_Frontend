@@ -1,7 +1,5 @@
 import React, { useEffect } from 'react';
 import { useBlogs } from '../../shared/hooks/useAllBlogs.jsx';
-import CommentForm from '../../components/comments/CommentsForm.jsx';
-import {CommentsList} from '../../components/comments/ShowComments.jsx';
 import "./dashboardPage.css";
 
 export const DashboardPage = () => {

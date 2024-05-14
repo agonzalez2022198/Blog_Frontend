@@ -24,7 +24,7 @@ export const DashboardPage = () => {
                 <h2 className="blog-title">{blog.title}</h2>
                 <p className="blog-author">Author: {blog.author}</p>
                 <p className="blog-content">{blog.content}</p>
-                <img className="blog-image" src={blog.image} alt={blog.title} />
+                <img className="blog-image" src={blog.image} alt="100px" width="160px" height="160px" />
               </li>
             ))}
           </ul>

@@ -17,7 +17,8 @@ export const useBlogs = () => {
                 setBlogs(datesBlogs.data.blogs);
             }
         } catch (error) {
-            // Maneja el error
+            error: true,
+            e
         } finally {
             setIsFetching(false);
         }

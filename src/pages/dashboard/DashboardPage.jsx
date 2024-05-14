@@ -28,9 +28,9 @@ export const DashboardPage = () => {
               </li>
             ))}
           </ul>
-          {/* Agrega el componente CommentForm aquí */}
+          {}
           <CommentForm />
-          {/* Agrega el componente CommentsList aquí */}
+          {}
           <CommentsList />
         </div>
       )}

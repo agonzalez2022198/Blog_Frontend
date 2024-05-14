@@ -5,7 +5,7 @@ import toast from "react-hot-toast";
 
 export const useAddcomments = () => {
     const [comments, setComments] = useState(false);
-    const [commentsDetail, setCommentsDetail] = useState(null); // Define commentsDetail
+    const [commentsDetail, setCommentsDetail] = useState(null);
 
     const navigate = useNavigate();
 
@@ -24,7 +24,7 @@ export const useAddcomments = () => {
         }
 
         const { commentsDetail } = response.data;
-        setCommentsDetail(commentsDetail); // Guarda commentsDetail en el estado local
+        setCommentsDetail(commentsDetail);
 
         localStorage.setItem('comments', JSON.stringify(commentsDetail))
 
@@ -32,7 +32,7 @@ export const useAddcomments = () => {
     } 
 
     return {
-        comment2, // Devuelve comment2
-        commentsDetail // Devuelve commentsDetail
+        comment2, 
+        commentsDetail 
     }
 }

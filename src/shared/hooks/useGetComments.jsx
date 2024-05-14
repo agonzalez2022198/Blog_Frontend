@@ -12,12 +12,10 @@ export const useComments = () => {
             console.log(datesComments.data);
 
             if (datesComments.error) {
-                // Maneja el error
             } else {
                 setComments(datesComments.data.comments);
             }
         } catch (error) {
-            // Maneja el error
         } finally {
             setIsFetching(false);
         }

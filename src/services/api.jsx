@@ -9,7 +9,7 @@ apiClient.interceptors.request.use(
     (config) =>{
         const blogDetails = localStorage.getItem('blogs')
 
-        if(blogDetails){ // Corrección: Cambia userDetails por blogDetails
+        if(blogDetails){
             const token =  JSON.parse(blogDetails).token
             config.headers.Authorization = `Bearer ${token}`
         }
